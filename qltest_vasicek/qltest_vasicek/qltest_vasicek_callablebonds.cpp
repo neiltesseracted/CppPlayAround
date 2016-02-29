@@ -13,7 +13,7 @@
 
 //  The original example sets up a callable fixed rate bond with a Hull White pricing
 //  engine and compares to Bloomberg's Hull White price/yield calculations.
-//  I re-engineered it here and there, also added Vasicek as an additional
+//  I re-engineered it here and there, and added Vasicek as an additional
 //  PricingEngine to compare with Hull-White.
 //  This file is not intended for business use, but for academic purposes only.
 //  - Zesheng "Neil" Li
@@ -28,29 +28,17 @@ using namespace QuantLib;
 
 boost::shared_ptr<YieldTermStructure>
 flatRate(const Date& today,
-         const boost::shared_ptr<Quote>& forward,
-         const DayCounter& dc,
-         const Compounding& compounding,
-         const Frequency& frequency) {
-    return boost::shared_ptr<YieldTermStructure>(new FlatForward(today,
-                                                                 Handle<Quote>(forward),
-                                                                 dc,
-                                                                 compounding,
-                                                                 frequency)
-                                                 );
-}
-
-boost::shared_ptr<YieldTermStructure>
-flatRate(const Date& today,
          Rate forward,
          const DayCounter& dc,
          const Compounding &compounding,
          const Frequency &frequency) {
-    return flatRate(today,
-                    boost::shared_ptr<Quote>(new SimpleQuote(forward)),
-                    dc,
-                    compounding,
-                    frequency);
+    return boost::shared_ptr<YieldTermStructure>(
+                            new FlatForward(today,
+                            Handle<Quote>(boost::shared_ptr<Quote>(new SimpleQuote(forward))),
+                            dc,
+                            compounding,
+                            frequency)
+                                                 );
 }
 
 int main(int argc, const char * argv[]) {
@@ -63,7 +51,7 @@ int main(int argc, const char * argv[]) {
         cout <<  endl;
         cout << "This example prices a callable fixed rate bond using" << endl;
         cout << "Hull White model w/ reversion parameter = 0.03" << endl;
-        cout << "Vasicek model w/ long term mean & r0 = 0.055" <<endl;
+        cout << "vs Vasicek model w/ long term mean & r0 = 0.055" <<endl;
         cout << "& same reversion parameter" <<endl;
         cout << endl;
         cout << "The bond:" <<endl;
