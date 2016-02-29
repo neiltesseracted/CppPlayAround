@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5DD3E611C838CBB00D9A3BE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5DD3E601C838CBB00D9A3BE /* main.cpp */; };
+		B5DD3E611C838CBB00D9A3BE /* qltest_vasicek_callablebonds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B5DD3E601C838CBB00D9A3BE /* qltest_vasicek_callablebonds.cpp */; };
 		B5DD3E681C838FC200D9A3BE /* libQuantLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DD3E671C838FC200D9A3BE /* libQuantLib.a */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 
 /* Begin PBXFileReference section */
 		B5DD3E5D1C838CBB00D9A3BE /* qltest_vasicek */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = qltest_vasicek; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5DD3E601C838CBB00D9A3BE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B5DD3E601C838CBB00D9A3BE /* qltest_vasicek_callablebonds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = qltest_vasicek_callablebonds.cpp; sourceTree = "<group>"; };
 		B5DD3E671C838FC200D9A3BE /* libQuantLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQuantLib.a; path = ../../../../../../../usr/local/Cellar/quantlib/1.7/lib/libQuantLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +61,7 @@
 		B5DD3E5F1C838CBB00D9A3BE /* qltest_vasicek */ = {
 			isa = PBXGroup;
 			children = (
-				B5DD3E601C838CBB00D9A3BE /* main.cpp */,
+				B5DD3E601C838CBB00D9A3BE /* qltest_vasicek_callablebonds.cpp */,
 			);
 			path = qltest_vasicek;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5DD3E611C838CBB00D9A3BE /* main.cpp in Sources */,
+				B5DD3E611C838CBB00D9A3BE /* qltest_vasicek_callablebonds.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
