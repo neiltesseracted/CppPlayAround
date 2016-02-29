@@ -1,7 +1,7 @@
 //  mode: c++11
 //
 //  main.cpp
-//  qltest_vasicek_callablebonds
+//  qltest_vasicek_callable
 //
 //  Created by Zesheng Li on 2/28/16.
 //  Copyright © 2016 neil. All rights reserved.
