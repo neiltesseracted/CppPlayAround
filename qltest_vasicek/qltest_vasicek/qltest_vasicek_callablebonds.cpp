@@ -1,3 +1,4 @@
+//  mode: c++11
 //
 //  main.cpp
 //  qltest_vasicek_callablebonds
